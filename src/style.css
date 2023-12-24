@@ -1,0 +1,60 @@
+* {
+  color : #2F2F2F;
+}
+
+.main{
+  width: 60%;
+ 
+}
+
+.priority {
+  border-radius: 30px;
+  
+}
+
+.high {
+  background-color: rgba(255, 150, 150, 0.3);
+}
+
+.low {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+.medium {
+  background-color: rgba(255, 165, 0, 0.3); ;
+}
+
+.small {
+  margin-left: 15px;
+}
+
+.count:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(144, 238, 144, 0.8); 
+}
+
+.task:hover {
+  box-shadow: 0 0 5px rgba(144, 238, 144, 0.5);
+}
+
+.form-control:focus{
+  box-shadow: none;
+  border: 3px solid rgba(144, 238, 144, 0.8)
+}
+
+ .form-select:focus{
+  box-shadow: none;
+  border: 3px solid rgba(144, 238, 144, 0.8)
+}
+
+@media (max-width: 768px) {
+  .main{
+  width: 100%
+  }
+}
+
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+  .main{
+    width: 90%
+  }
+}
