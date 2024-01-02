@@ -1,11 +1,3 @@
-<script setup>
-  import InputForm from './components/InputForm.vue'
-  import Title from './components/Title.vue'
-  import CountPriority from './components/CountPriority.vue'
-  import Done from './components/Done.vue'
-  import Task from './components/Task.vue'
-</script>
-
 <template>
  <div class="container mt-5 main">
 
@@ -18,20 +10,21 @@
       :taskHigh="taskHigh"
     />
 
-    <InputForm :addTaskList="addTaskList" :newTask="newTask"/>
+    <InputForm 
+      :addTaskList="addTaskList" 
+      :newTask="newTask"
+    />
 
     <div class="row my-4">
       <div class="col-md-6">
         <Task 
-          :taskList="taskList" 
-          :removeTaskList="removeTaskList" 
-          :doneTask="doneTask"/>
+          :taskList="taskList"  
+        />
       </div>
       <div class="col-md-6">
         <Done 
           :taskDone="taskDone" 
-          :removeDoneList="removeDoneList" 
-          :undoneTask="undoneTask"/>
+        />
       </div>
     </div>
 
@@ -39,7 +32,21 @@
 </template>
 
 <script>
+
+import InputForm from './components/InputForm.vue'
+import Title from './components/Title.vue'
+import CountPriority from './components/CountPriority.vue'
+import Done from './components/Done.vue'
+import Task from './components/Task.vue'
+
 export default {
+  components: {
+    InputForm,
+    Title,
+    CountPriority,
+    Done,
+    Task,
+  },
   data() {
     return {
       newTask: { name: "", priority: "" }, // data baru
@@ -50,6 +57,14 @@ export default {
       taskDone: JSON.parse(localStorage.getItem("taskDone")) || [ // list data done
         { name: "Main game (example)", priority: "High" },
       ],
+    };
+  },
+  provide() { // for inject in button
+    return {
+      removeTaskList: this.removeTaskList,
+      doneTask: this.doneTask,
+      removeDoneList: this.removeDoneList,
+      undoneTask: this.undoneTask,
     };
   },
   methods:{

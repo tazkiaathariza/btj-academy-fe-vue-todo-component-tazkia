@@ -16,14 +16,8 @@
                   </p>
                 </div>
                 <div class="col-md-8 col-sm-8 space-3 text-md-end text-sm-center">
-                  <button class="btn btn-danger px-3 mx-1 small" 
-                    @click="removeTaskList(index)">
-                    Delete
-                  </button>
-                  <button class="btn btn-success px-3 mx-2 small" 
-                    @click="doneTask(index)">
-                    Done
-                  </button>
+                  <Button buttonName="Delete" :index="index"></Button>
+                  <Button buttonName="Done" :index="index"></Button>
               </div>
             </div>
         </div>
@@ -31,11 +25,15 @@
 </template>
 
 <script>
+  import Button from "./Button.vue";
+
   export default {
+    components: {
+      Button,
+   },
     props: {
       taskList: Array,
-      removeTaskList: Function,
-      doneTask: Function,
     },
   };
+  
 </script>
