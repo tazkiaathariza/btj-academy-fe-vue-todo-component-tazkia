@@ -1,50 +1,48 @@
 <template>
-<div class="row gx-5 mb-2 mt-4">
-
-      <div class="col-md-3 col-sm-12 mb-3">
-        <div class="card count" style="width: 100%">
-          <div class="card-body text-center">
-            <h6 class="card-subtitle mb-2 text-body-secondary">Pending</h6>
-            <h5 class="card-title">{{ allTask }}</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-12 mb-3">
-        <div class="card count" style="width: 100%">
-          <div class="card-body text-center">
-            <h6 class="card-subtitle mb-2 text-body-secondary">Low Priority</h6>
-            <h5 class="card-title">{{ taskLow }}</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-12 mb-3">
-        <div class="card count" style="width: 100%">
-          <div class="card-body text-center">
-            <h6 class="card-subtitle mb-2 text-body-secondary">Medium Priority</h6>
-            <h5 class="card-title">{{ taskMedium }}</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-12 mb-3">
-        <div class="card count" style="width: 100%">
-          <div class="card-body text-center">
-            <h6 class="card-subtitle mb-2 text-body-secondary">High Priority</h6>
-            <h5 class="card-title">{{ taskHigh }}</h5>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
+  <div class="row gx-5 mb-2 mt-4">
+      <CountCard 
+        countName="Pending" 
+        :countNumber="allTask"
+      />
+      <CountCard 
+        countName="Low Priority" 
+        :countNumber="taskLow" 
+      />
+      <CountCard 
+        countName="Medium Priority" 
+        :countNumber="taskMedium"
+      />
+      <CountCard 
+        countName="High Priority" 
+        :countNumber="taskHigh" 
+      />
+  </div>
 </template>
 
 <script>
+import CountCard from './CountCard.vue';
+
 export default {
+  components: {
+    CountCard,
+  },
   props: {
-    allTask: Number,
-    taskLow: Number,
-    taskMedium: Number,
-    taskHigh: Number,
+    allTask: {
+      type: Number,
+      required: true,
+    },
+    taskLow: {
+      type: Number,
+      required: true,
+    },
+    taskMedium: {
+      type: Number,
+      required: true,
+    },
+    taskHigh: {
+      type: Number,
+      required: true,
+    },
   },
 };
 </script>
