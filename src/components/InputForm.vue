@@ -40,3 +40,15 @@ export default {
   }
 }
 </script>
+
+<style>
+.form-control:focus{
+  box-shadow: none;
+  border: 3px solid rgba(144, 238, 144, 0.8)
+}
+
+ .form-select:focus{
+  box-shadow: none;
+  border: 3px solid rgba(144, 238, 144, 0.8)
+}
+</style>

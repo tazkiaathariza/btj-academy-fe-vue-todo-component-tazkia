@@ -22,10 +22,16 @@
 
     <div class="row my-4">
       <div class="col-md-6">
-        <Task :taskList="taskList" :removeTaskList="removeTaskList" :doneTask="doneTask"/>
+        <Task 
+          :taskList="taskList" 
+          :removeTaskList="removeTaskList" 
+          :doneTask="doneTask"/>
       </div>
       <div class="col-md-6">
-        <Done :taskDone="taskDone" :removeDoneList="removeDoneList" :undoneTask="undoneTask"/>
+        <Done 
+          :taskDone="taskDone" 
+          :removeDoneList="removeDoneList" 
+          :undoneTask="undoneTask"/>
       </div>
     </div>
 

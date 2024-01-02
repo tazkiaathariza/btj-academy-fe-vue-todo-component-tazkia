@@ -1,7 +1,20 @@
-# Vue 3 + Vite
+# JavaScript Framework (VueJS) - To Do App - Tazkia
+Folder ini merupakan task kedua dari materi JavaScript Framework. JavaScript framework yang digunakan adalah VueJS, sementara untuk styling digunakan CSS framework yaitu Bootstrap. 
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Getting started
+1. Download atau clone repository ini :
+```
+git clone https://github.com/tazkiaathariza/btj-academy-fe-vue-todo-component-tazkia
+```
+2. Install seluruh dependencies yang diperlukan.
+2. Jalankan `npm run dev`
+3. Buka di browser lokal `http://127.0.0.1:5173/`
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## What you can do in this TODO App
+1. Menambahkan task baru yang akan disimpan di dalam local storage.
+2. Menampilkan seluruh task yang belum selesai pada kolom 'TODO'.
+3. Menandai task yang sudah selesai dengan tombol 'Done'.
+4. Menampilan seluruh task yang sudah selesai pada kolom 'DONE'.
+5. Menghapus task dari list 'TODO' maupun 'DONE'.
+6. Melakukan 'Undone'.
+7. Menghitung jumlah task dengan priority 'medium', 'high', 'low', dan'pending'.
