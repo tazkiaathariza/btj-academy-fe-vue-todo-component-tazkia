@@ -28,12 +28,16 @@
 <script>
 import Button from "./Button.vue";
 
-  export default {
+export default {
     components: {
       Button,
    },
     props: {
-      taskDone: Array,
+      taskDone: {
+        type: Array,
+        required: true
+      }
     },
-  };
+};
+
 </script>

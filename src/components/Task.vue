@@ -25,15 +25,19 @@
 </template>
 
 <script>
-  import Button from "./Button.vue";
 
-  export default {
+import Button from "./Button.vue";
+
+export default {
     components: {
       Button,
    },
     props: {
-      taskList: Array,
+      taskList: {
+        type: Array,
+        required: true
+      }
     },
-  };
+};
   
 </script>
